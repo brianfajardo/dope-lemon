@@ -12,7 +12,7 @@ const store = configureStore()
 // content area of the device.
 // enables full ScrollView
 
-export default App = () =>
+export default () =>
   <Provider store={store}>
     <View style={{ flex: 1 }}>
       <Header text="Because You ❤️ Taylor Swift" />
