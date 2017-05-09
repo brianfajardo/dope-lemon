@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { ScrollView, Text } from 'react-native'
 import { Card, Button } from 'react-native-elements'
 
 import CardContent from './CardContent'
@@ -12,10 +12,10 @@ export default AlbumCard = props => {
     image,
     thumbnail_image
    } = props.album
-  const { buttonStyle, textStyle } = styles
+  const { buttonStyle, textStyle, imageStyle } = styles
 
   return (
-    <Card image={{ uri: image }}>
+    <Card image={{ uri: image }} imageStyle={imageStyle}>
       <CardContent
         title={title}
         artist={artist}
@@ -41,5 +41,9 @@ const styles = {
     marginLeft: 0,
     marginRight: 0,
     marginBottom: 0
+  },
+  imageStyle: {
+    height: 250,
+    width: null
   }
 }
