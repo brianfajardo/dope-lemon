@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import { connect } from 'react-redux'
-
 import { fetchAlbums } from '../actions/index'
+
+import AlbumDetail from '../components/AlbumDetail'
 
 class AlbumList extends Component {
   componentWillMount() {
     this.props.fetchAlbums()
   }
 
+  renderAlbums() {
+    const { albums } = this.props
+
+    return albums.map(album =>
+      <AlbumDetail album={album} key={album.title} />
+    )
+  }
+
   render() {
     return (
       <View>
-        <Text>Album list</Text>
+        {this.renderAlbums()}
       </View>
     )
   }
