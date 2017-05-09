@@ -8,10 +8,14 @@ import AlbumList from './src/containers/AlbumList'
 
 const store = configureStore()
 
+// flex: 1 expands component to fill the entire
+// content area of the device.
+// enables full ScrollView
+
 export default () =>
   <Provider store={store}>
-    <View>
-      <Header text="Because you ❤️ Taylor Swift" />
+    <View style={{ flex: 1 }}>
+      <Header text="Because You ❤️ Taylor Swift" />
       <AlbumList />
     </View>
   </Provider>

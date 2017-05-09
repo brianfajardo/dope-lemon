@@ -1,5 +1,5 @@
 import React from 'react'
-import { ScrollView, Text } from 'react-native'
+import { View, Text, Linking } from 'react-native'
 import { Card, Button } from 'react-native-elements'
 
 import CardContent from './CardContent'
@@ -22,11 +22,12 @@ export default AlbumCard = props => {
         thumbnail={thumbnail_image}
       />
       <Button
-        icon={{ name: 'add-shopping-cart' }}
-        backgroundColor='#03A9F4'
+        icon={{ name: 'shop' }}
+        backgroundColor='#007aff'
         buttonStyle={buttonStyle}
         title='Buy'
         raised
+        onPress={() => Linking.openURL(url)}
       />
     </Card>
   )
@@ -37,10 +38,12 @@ const styles = {
     marginBottom: 10
   },
   buttonStyle: {
-    borderRadius: 0,
+    borderRadius: 5,
     marginLeft: 0,
     marginRight: 0,
-    marginBottom: 0
+    marginBottom: 0,
+    marginTop: 5,
+    height: 35
   },
   imageStyle: {
     height: 250,
