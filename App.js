@@ -11,7 +11,7 @@ const store = configureStore()
 export default () =>
   <Provider store={store}>
     <View>
-      <Header text="Albums" />
+      <Header text="Because you ❤️ Taylor Swift" />
       <AlbumList />
     </View>
   </Provider>

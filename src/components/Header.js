@@ -1,19 +1,20 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { View, Text } from 'react-native'
 
 const Header = props => {
+  const { text } = props
   const { viewStytle, textStyle } = styles
 
   return (
     <View style={viewStytle}>
-      <Text style={textStyle}>{props.text}</Text>
+      <Text style={textStyle}>{text}</Text>
     </View>
   )
 }
 
 const styles = {
   viewStytle: {
-    backgroundColor: '#EEE',
+    backgroundColor: '#FFF',
     justifyContent: 'center',
     alignItems: 'center',
     height: 60,
@@ -25,7 +26,7 @@ const styles = {
     position: 'relative'
   },
   textStyle: {
-    fontSize: 25
+    fontSize: 16
   }
 }
 

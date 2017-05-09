@@ -3,7 +3,7 @@ import { View } from 'react-native'
 import { connect } from 'react-redux'
 import { fetchAlbums } from '../actions/index'
 
-import AlbumDetail from '../components/AlbumDetail'
+import AlbumCard from '../components/AlbumCard'
 
 class AlbumList extends Component {
   componentWillMount() {
@@ -14,8 +14,7 @@ class AlbumList extends Component {
     const { albums } = this.props
 
     return albums.map(album =>
-      <AlbumDetail album={album} key={album.title} />
-    )
+      <AlbumCard album={album} key={album.title} />)
   }
 
   render() {
