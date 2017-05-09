@@ -1,6 +1,6 @@
 node_modules/
 .expo/
 npm-debug.*
-.flowconfig
-.watchmanconfig
-app.json
+*.flowconfig
+*.watchmanconfig
+*app.json
