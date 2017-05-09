@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 
-export default Header = props => {
+export default (props) => {
   const { text } = props
   const { viewStytle, textStyle } = styles
 

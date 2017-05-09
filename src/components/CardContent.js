@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, Image } from 'react-native'
 import { Avatar } from 'react-native-elements'
 
-export default CardContent = props => {
+export default (props) => {
   const { title, artist, thumbnail } = props
   const {
     textViewStyle,

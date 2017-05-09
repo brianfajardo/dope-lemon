@@ -4,7 +4,7 @@ import { Card, Button } from 'react-native-elements'
 
 import CardContent from './CardContent'
 
-export default AlbumCard = props => {
+export default (props) => {
   const {
     title,
     artist,
