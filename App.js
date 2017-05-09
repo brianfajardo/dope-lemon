@@ -1,7 +1,17 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { View } from 'react-native'
+import { Provider } from 'react-redux'
+import configureStore from './src/store/configureStore'
 
 import Header from './src/components/Header'
+import AlbumList from './src/containers/AlbumList'
+
+const store = configureStore()
 
 export default () =>
-  <Header text="Albums" />
+  <Provider store={store}>
+    <View>
+      <Header text="Albums" />
+      <AlbumList />
+    </View>
+  </Provider>
